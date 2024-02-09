@@ -13,7 +13,7 @@ class LogFillDB():
         query = f"""
         SELECT DISTINCT {id}
         FROM `{table_1}`
-        WHERE A NOT IN (
+        WHERE {id} NOT IN (
             SELECT DISTINCT {id}
             FROM `{table_2}`
         )
